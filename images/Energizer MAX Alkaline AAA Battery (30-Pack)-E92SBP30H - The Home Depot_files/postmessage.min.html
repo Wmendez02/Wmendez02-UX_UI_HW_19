@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0117)https://va.idp.liveperson.net/postmessage/postmessage.min.html?bust=1607735811014&loc=https%3A%2F%2Fwww.homedepot.com -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>lpAjax post message callee</title><meta http-equiv="X-UA-Compatible" content="IE=100"><script type="text/javascript">window.lpTag=window.lpTag||{},lpTag.taglets=lpTag.taglets||{},function(e,t){function r(e){a({rawData:e,origin:R,responseType:y.stats})}function n(e){var t=e.indexOf("loc=");return t>-1?e.substr(t+4):"*"}function o(t,r,n){e.addEventListener?t.addEventListener(r,n,!1):t.attachEvent("on"+r,n)}function a(t,r,n){try{r=r||e.parent,r.postMessage(JSON.stringify(t),n||v)}catch(o){}}function s(e){var t={data:e.data,source:e.source,origin:e.origin};t.data=JSON.parse(t.data),"object"==typeof t.data&&(t.data.url&&t.data.callId?d(t):t.data.validation&&t.data.callId&&(l(t.data.defaults),a({frameStarted:!0,origin:t.origin,responseType:"completeLoad",callId:t.data.callId,info:u()},t.source,t.data.returnDomain),i(t.data.defaults)))}function i(t){if(t)try{e.sessionStorage.setItem(L,JSON.stringify(t))}catch(r){}}function c(){try{var t=JSON.parse(e.sessionStorage.getItem(L));t&&l(t)}catch(r){}}function l(r){if(e.lpTag&&t.taglets&&t.taglets.xhr&&t.taglets.xhr.configure)try{t.taglets.xhr.configure({defaults:r})}catch(n){}}function u(){if(!(e.lpTag&&t.taglets&&t.taglets.xhr&&t.taglets.xhr.inspect))return{};try{var r=t.taglets.xhr.inspect();return"object"==typeof r&&(r.calleeInfo={version:C,transportType:x}),r}catch(n){return{}}}function d(e){var r=e.data;if(p(r,e.origin),r.success=function(t){T=0,h(t,y.completed,e)},r.progress=function(t){e.data&&e.data.fireProgress&&h(t,y.progress,e)},r.error=function(t){h(t,y.error,e),T+=1,T>m&&!g&&(h(E,y.reloading,e),g=!0,setTimeout(f,1e3))},t.taglets.xhr&&t.taglets.xhr.issueCall)try{t.taglets.xhr.issueCall(r)}catch(n){h(O,"errorLoad",e)}}function p(e,t){e.headers=e.headers||{},e.headers["LP-DOMAIN-REFERER"]=t}function f(){e.location.href=e.location.href}function h(e,t,r){e.callId=r.data.callId,e.responseType=t,a(e,r.source,r.data.returnDomain)}t.taglets.lpAjax=t.taglets.lpAjax||{publishMetrics:r};var T=0,g=!1,m=6,y={progress:"progressLoad",completed:"completeLoad",error:"errorLoad",reloading:"reloading",stats:"statData"},E={statusCode:610,responseCode:610,HTTPStatus:"Persistent communication errors, reloading",body:{error:"Persistent communication errors, reloading"},headers:""},O={statusCode:602,responseCode:602,HTTPStatus:"Internal error in execution, transport: postmessage.callee to xhr",body:{error:"Transport crashed running request"},headers:""},v=n(location.search),R=location.protocol+"//"+location.host,C="1.1.4",x="postmessage.callee",L="lpPmCalleeDfs";o(e,"message",s),c()}(window,window.lpTag),window.lpTag=window.lpTag||{},lpTag.taglets=lpTag.taglets||{},lpTag.taglets.xhr=lpTag.taglets.xhr||function(e){function t(){if(ue.lpAjax&&ue.lpAjax.addTransport){Y=ue.lpAjax;try{Y.addTransport(z,de)}catch(e){}}G()}function r(e){if(e&&e.defaults)for(var r in e.defaults)e.defaults.hasOwnProperty(r)&&W.hasOwnProperty(r)&&(W[r]=e.defaults[r]);t(),le=!0}function n(e){e=s(e);var t=!1;if(e&&e.url&&"string"==typeof e.url&&Q==l(e.url))if(e.method&&e.method.toLowerCase()!==B.GET.toLowerCase())t=!0;else{var r=ne,n="";0!==e.url.indexOf("http")&&(e.url=c(e.url));try{e.query&&(n=y(e.query)),e.data&&(n+=y(e.data))}catch(o){x("Error stringifying data",k.ERROR),t=!1}e.cache||(r-=10),e.url.length+1+n.length<=r&&(t=!0)}return le&&t}function o(e){n(e)?T(e):e&&e.error&&C(e.error,te,e.context)}function a(){return{name:z,version:K,callsMade:oe,errorsFound:ae,pending:ie.length,defaults:JSON.parse(v(W))}}function s(e){return e.method=e.method||W.method,e.encoding=e.encoding||W.encoding,e.mimeType=e.mimeType||W.mimeType,e.retries=isNaN(e.retries)?W.retries:e.retries,e.timeout=isNaN(e.timeout)?W.timeout:e.timeout,e.XMLHTTPOverride="boolean"==typeof e.XMLHTTPOverride?e.XMLHTTPOverride:W.XMLHTTPOverride,e.cache="boolean"==typeof e.cache?e.cache:W.cache,e.asynch="boolean"==typeof e.asynch?e.asynch:W.asynch,e.method.toLowerCase()!==B.PUT.toLocaleLowerCase()&&e.method.toLowerCase()!==B.DELETE.toLocaleLowerCase()||!e.XMLHTTPOverride||(e.headers[Z]=e.method,e.method=B.POST),e}function i(e){var t=e.url.indexOf("__d=");t>-1&&(e.url=e.url.substr(0,t-1)),!e.cache&&(e.method.toLowerCase()!==B.GET.toLowerCase()||e.url.length<=ne-10)&&(e.url+=e.url.indexOf("?")>0?"&__d=":"?__d=",e.url+=Math.floor(1e5*Math.random()))}function c(e){var t=document.location.href.lastIndexOf("/")||document.location.href.lastIndexOf("?"),r=document.location.href.substr(0,t);return e=r+"/"+e}function l(t){var r,n=new RegExp(/(http{1}s{0,1}?:\/\/)([^\/\?]+)(\/?)/gi),o=null;return r=0===t.indexOf("http")?n.exec(t):n.exec(e.location.href),r&&r.length>=3&&""!==r[2]&&(o=r[1].toLowerCase()+r[2].toLowerCase()),o}function u(e,t,r){if(t=t||{},t["Content-Type"]=d(t["Content-Type"]||W.mimeType,r.encoding),t.Accept=t.Accept||W.acceptHeader,t["X-Requested-With"]="XMLHttpRequest",t)for(var n in t)if(t.hasOwnProperty(n))try{e.setRequestHeader(n,t[n])}catch(o){}return e}function d(e,t){var r=e;return(!r||""===r||r.indexOf("charset")<0)&&(r=(r||W.MIMETYPE)+"; charset="+(t||W.encoding)),r}function p(e){var t=re?S(e):L(e);t.overrideMimeType&&t.overrideMimeType(e.mimeType);try{e.query&&(e.url=f(e.url,e.query),e.query=null),e.method===B.GET&&e.data?(e.url=f(e.url,e.data),e.data=null):"undefined"!=typeof e.data&&(e.data=O(e.data))}catch(r){return m(e,t,!1,{responseCode:601,HTTPStatus:"Unable to service request",headers:"",body:{error:"unable to stringify data for requests"}}),!1}return i(e),e.xhr=t,t.open(e.method,e.url,e.asynch),t=u(t,e.headers,e),h(e),t.send(e.data||null),F||setTimeout(g,1e3),!0}function f(e,t){var r;return r=y(t),r&&(e+=e.indexOf("?")<0?"?":"&",e+=r),e}function h(e){e.launchTime=new Date,ie.push(e),q()}function T(e){se.push(e),R()}function g(){F&&(clearTimeout(F),F=null);for(var e=new Date,t=[],r=0;r<ie.length;r++){var n=ie[r],o=e.valueOf()-n.launchTime.valueOf();o>n.timeout&&(m(n,n.xhr,!0),t.push(n))}for(var a=0;a<t.length;a++)J(t[a]),t[a]=null;(se.length>0||ie.length>0)&&(F=setTimeout(g,1e3))}function m(e,t,r,n){if(I(),e.launchTime&&X(e.launchTime.getTime(),e.url,e.method,n&&n.responseCode||408),r||J(e),E(e),r&&t)try{t.abort()}catch(o){x("Error when trying to abort request "+e.url,k.ERROR)}t&&P(t),e.retries>0&&!n?(e.retries=e.retries-1,T(e)):C(e.error,n||ee,e.context)}function y(e){var t="";if("string"==typeof e)t+=e;else{var r=!0;for(var n in e)if(e.hasOwnProperty(n)){var o;"object"==typeof e[n]?o=v(e[n]):"function"!=typeof e[n]&&(o=e[n]),"undefined"!=typeof o&&(r||(t+="&"),t+=encodeURIComponent(n)+"="+encodeURIComponent(o),r=!1)}}return t}function E(e){for(var t=["xhr"],r=0;r<t.length;r++)e[t[r]]=null,delete e[t[r]]}function O(e){return"object"==typeof e?v(e):"string"==typeof e?e:""}function v(e){var t;if("function"==typeof Array.prototype.toJSON){var r=Array.prototype.toJSON;delete Array.prototype.toJSON;try{t=JSON.stringify(e)}catch(n){throw Array.prototype.toJSON=r,n}Array.prototype.toJSON=r}else t=JSON.stringify(e);return t}function R(){for(;ie.length<6&&se.length>0;)p(se.shift())}function C(e,t,r){if(e&&"function"==typeof e)try{e.call(r,t)}catch(n){x(n.message,"error")}}function x(t,r){e.lpTag&&lpTag.log&&lpTag.log(t,r,z)}function L(t){var r=new e.XMLHttpRequest;return r.addEventListener(V.LOAD,function(){t&&!t.completed?(D(this,t),t.completed=!0):t=null}),r.addEventListener(V.PROGRESS,function(){var e=w(this);e&&t&&t.progress&&C(t.progress,e,t.context)}),r.addEventListener(V.ERROR,function(){t&&!t.completed?(H(this,t),t.completed=!0):t=null}),r.addEventListener(V.READYSTATE,function(){this.readyState===$.COMPLETE&&(t&&!t.completed?(D(this,t),t.completed=!0):t=null)}),r}function S(t){var r=new e.XMLHttpRequest;return r[V.READYSTATE]=function(){t.completed||this.readyState===$.COMPLETE&&(D(this,t),t.completed=!0)},r[V.ERROR]=function(){H(this,t)},r}function P(e){e[V.READYSTATE]=null,e[V.ERROR]=null,re||(e[V.PROGRESS]=null,e[V.LOAD]=null),e=null}function w(e){var t,r;if(!e)return x("No data from request",k.INFO),{};try{r=M(e),t={responseCode:b(e,"status")||404,HTTPStatus:b(e,"statusText"),body:b(e,"responseText","string")||b(e,"responseXML"),headers:r.headers,originalHeader:r.originalHeader}}catch(n){return x(n.message,k.ERROR),{}}if(A(t))try{t.body=JSON.parse(t.body)}catch(n){}return t.responseCode=1223==t.responseCode?204:t.responseCode,t.responseCode>=12e3&&(t.internalCode=t.responseCode,t.responseCode=500),t.statusCode=t.responseCode,t}function A(e){return e&&e.headers&&e.headers["Content-Type"]&&e.headers["Content-Type"].indexOf(_.JSON)>-1}function b(e,t,r){try{return r?typeof e[t]===r?e[t]:"":e[t]}catch(n){return""}}function M(e){var t,r={};try{t=e.getAllResponseHeaders()}catch(n){t=""}if(t)for(var o=t.split("\n"),a=0;a<o.length;a++)try{var s=o[a].split(":");if(s[0]){var i=s.length>2?s.slice(1).join(":"):s[1];r[N(s[0])]=N(i)}}catch(n){}return{originalHeader:t,headers:r}}function N(e){return e&&"string"==typeof e&&(e=e.replace(/^[\s\r]*/,""),e=e.replace(/[\s\r]*$/g,"")),e}function D(e,t){E(t);var r=w(e);if(t.launchTime&&X(t.launchTime.getTime(),t.url,t.method,r.responseCode),r){var n;r.responseCode>399?m(t,e,!1,r):(J(t),n=t.success,C(n,r,t.context),P(e))}R()}function H(e,t){m(t,e),R()}function I(){ae+=1}function q(){oe+=1}function J(e){for(var t=0;t<ie.length;t++)if(ie[t]===e){ie.splice(t,1);break}}function X(e,t,r,n){var o,a;e&&(a=(new Date).getTime(),o=a-e,ce.push({rd:o,ts:e,url:t,method:r,statusCode:n}),ce.length>=W.metricsCount&&j())}function j(){var e;ue&&ue.lpAjax.publishMetrics&&ce.length>0&&(Y=ue.lpAjax,e={tags:[{transport:z}],metrics:ce},Y.publishMetrics(e),ce.length=0),G()}function G(){U&&clearTimeout(U),U=setTimeout(j,W.metricsTimeout)}var U,F,Y,_={JSON:"application/json",JAVASCRIPT:"text/javascript",HTML:"text/html",XMLAPP:"application/xml",XMLTEXT:"text/xml",FORM:"application/x-www-form-urlencoded;"},B={GET:"GET",POST:"POST",PUT:"PUT",PATCH:"PATCH",DELETE:"DELETE"},V={PROGRESS:"progress",LOAD:"load",ERROR:"error",ABORT:"abort",READYSTATE:"readystatechange"},k={ERROR:"ERROR",DEBUG:"DEBUG",INFO:"INFO"},W={encoding:"UTF-8",method:B.GET,asynch:!0,timeout:3e4,mimeType:_.JSON,cache:!1,acceptHeader:"*/*",XMLHTTPOverride:!0,retries:2,metricsCount:100,metricsTimeout:6e4},$={UNSENT:0,OPENED:1,HEADERS_RECIEVED:2,LOADING:3,COMPLETE:4},z="xhr",K="1.1.8",Q=l(document.location.href),Z="X-HTTP-Method-Override",ee={responseCode:404,HTTPStatus:"bad request",body:{error:"Request timed out"},headers:""},te={responseCode:600,HTTPStatus:"unable to service request",body:{error:"Transport - "+z+" - unable to run request"},headers:""},re=!e.addEventListener,ne=2083,oe=0,ae=0,se=[],ie=[],ce=[],le=!0,ue=lpTag.taglets;re&&(V.READYSTATE="on"+V.READYSTATE,V.ERROR="on"+V.ERROR);var de={init:t,name:z,v:K,configure:r,issueCall:o,isValidRequest:n,inspect:a};return t(),de}(window);</script></head><body data-new-gr-c-s-check-loaded="14.987.0" data-gr-ext-installed=""><div id="i4c-draggable-container" style="position: fixed; z-index: 1499; width: 0px; height: 0px;"><div data-reactroot="" class="resolved" style="all: initial;"></div></div><div id="i4c-dialogs-container"></div></body><style id="stylish-1" class="stylish" type="text/css">html {background: 
+
+     /***** COPY AND PASTE THE URL OF YOUR BACKROUND-IMAGE INSIDE THE url("") *****/
+
+
+     url("data:image/png;base64,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")
+
+     /***** FOR A SIMPLE BLACK BACKGROUND JUST REMOVE THE URL LINE ABOVE *****/
+     /***** Some background-images (you can also use your own url):
+
+  default:      https://abload.de/img/bg_digital94uzx.png
+  old default1: https://abload.de/img/b1fgs11.png
+  old default2: https://abload.de/img/ultra_x2vm9k.jpg
+                https://abload.de/img/b2w4shd.png
+                https://abload.de/img/b3qrs99.png
+                https://abload.de/img/b4zcse8.png
+                https://abload.de/img/b5b1s7x.png
+                https://abload.de/img/b6umsmy.png
+                https://abload.de/img/b7ars8c.png
+                https://abload.de/img/kubrickbgcolor2darkr8skc.png
+                https://abload.de/img/xpattern_darkq8s3i.png
+                https://abload.de/img/mainpatternolxcq.png
+
+*/ #1A1A1A /* fixed */ !important}
+
+
+/*----- DEFAULT TEXT, BORDER & BACKGROUND COLORS -----*/
+* {
+    color: #999 !important;
+    text-shadow: 0 0 3px #000 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border-color: #444 !important;
+    border-top-color: #444 !important;
+    border-bottom-color: #444 !important;
+    border-left-color: #444 !important;
+    border-right-color: #444 !important}
+body {background: transparent !important}
+*:before, *:after {background-color: transparent !important; border-color: #444 !important}
+
+a, a * {
+    color: #409B9B !important;
+    text-decoration: none !important}
+a:hover, a:hover *, a:visited:hover, a:visited:hover *, span[onclick]:hover, div[onclick]:hover, [role="link"]:hover, [role="link"]:hover *, [role="button"]:hover *, [role="menuitem"]:hover, [role="menuitem"]:hover *, .link:hover, .link:hover * {
+    color: #F0F0F0 !important;
+    text-shadow: 0 0 5px rgba(255,255,200,0.9) !important}
+a:visited, a:visited * {
+    color: #607069 !important}
+a.highlight, a.highlight *, a.active, a.active *, .selected, .selected *, [href="#"] {
+    color: #DDD !important;
+    font-weight: bold !important}
+
+h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, strong, [id*="headline"], [class*="headline"], [id*="header"], [class*="header"], [class*="header"] td {
+    color: #DDD !important}
+a h1, a h2, a h3, a h4, a h5, a h6, h1 a, h2 a, h3 a, a strong, a[id*="headline"], a[class*="headline"], a[id*="header"], a[class*="header"] {
+    text-decoration: underline !important}
+[class*="error"], [class*="alert"], code, span[onclick], div[onclick] {
+    color: #900 !important}
+
+::-moz-selection {background: #377 !important; color: #000 !important}
+::selection {background: #377 !important; color: #000 !important}
+:focus {outline: none !important}
+
+
+/*----- MENU & CO BACKGROUND-COLORS -----*/
+div[style="display: block;"], div[role="navigation"] {background: rgba(0,0,0,.5) !important}
+
+table {
+    background: rgba(40,30,30,.6) !important;
+    border-radius: 6px !important}
+table > tbody > tr:nth-child(even), table > tbody > tr > td:nth-child(even) {
+    background-color: rgba(0,0,0,.2) !important}
+
+iframe, embed, nav, label [onclick], nav ul, div[style*="position:"][style*="left:"][style*="visible"], div[style*="z-index:"][style*="left:"][style*="visible"], div[style*="-moz-user-select"], div[role="menu"], div[role="dialog"], span[class*="script"] div, [id*="menu"], [id*="Menu"], [class*="dropdown"], [class*="popup"], [class="title"], ul[style*="display:"], ul[style*="visibility:"] ul, [id*="nav"] ul, [class*="nav"] ul, ul[class*="menu"], a[onclick][style*="display"], a[id*="ghosteryfirefox"], #ghostery-purple-bubble, #translator-popup, .menu, .tooltip, .hovercard, .vbmenu_popup {
+    background: rgba(5,5,5,.9) !important;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #000 !important}
+header, #header, footer, #footer {
+    background: rgba(19,19,19,.9) !important;
+    box-shadow: 0 0 5px #000 !important}
+body > #dialog, body > .xenOverlay {
+    background: rgba(19,19,19,.96) !important;
+    background-clip: padding-box !important;
+    box-shadow: 0 0 15px #000, inset 0 0 0 1px rgba(200,200,200,.5), inset 0 0 5px #111 !important;
+    border: 10px solid rgba(99,99,99,.7) !important;
+    border-radius: 0 !important;}
+[id*="overlay"], [id*="lightbox"], blockquote {
+    background-color: rgba(35,35,35,.9) !important;
+    border-radius: 5px}
+pre, dl, .Message code {
+    background-color: rgba(5,5,5,.5) !important}
+
+
+/*----- DEFAULT BUTTONS, SEARCHBOXES & CO -----*/
+input, select, button, [role="button"], a.button, a.submit, a.BigButton, a.TabLink, .install[onclick] {
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    transition: border-color 0.3s !important;
+    background: #060606 !important;
+    color: #BBB !important;
+    text-shadow: 0 1px #000 !important;
+    border: 2px solid #333 !important;
+    border-radius: 4px !important;
+    box-shadow: 0 0 2px rgba(0,0,0,.9) !important}
+a[href="javascript:;"], a[class*="button"]:not(:empty), a[id*="button"]:not(:empty), a[id*="Button"]:not(:empty), div[class*="button"][onclick] {
+    transition: border-color 0.3s !important;
+    background: #060606 !important;
+    color: #BBB !important;
+    text-shadow: 0 1px #000 !important;
+    border-color: #333 !important;
+    box-shadow: 0 0 2px rgba(0,0,0,.9) !important}
+a[href="javascript:;"]:hover, a[class*="button"]:not(:empty):hover, a[id*="button"]:hover, a[id*="Button"]:not(:empty):hover, div[class*="button"][onclick]:hover {
+    background: #151515 !important;
+    color: #FFF !important}
+input *, select *, button *, a.button *, a.submit * {
+    color: #BBB !important;
+    text-shadow: none !important}
+input:hover, input[type="button"]:hover, select:hover, button:hover, [role="button"]:hover, a.button:hover, a.submit:hover, a.BigButton:hover, a.TabLink:hover {
+    border: 2px solid #555 !important;
+    border-top-color: #555 !important;
+    border-bottom-color: #555 !important;
+    border-left-color: #555 !important;
+    border-right-color: #555 !important}
+input:focus, select:focus {
+    box-shadow: 0 0 5px #077 !important}
+input *:hover * {
+    color: #F0F0F0 !important;
+    text-shadow: 0 0 2px #FFF !important}
+input[disabled], select[disabled], button[disabled], input[disabled]:hover, select[disabled]:hover, button[disabled]:hover, input[disabled]:focus, select[disabled]:focus, button[disabled]:focus {
+    opacity: 0.5 !important;
+    border-color: #333 !important}
+
+/*
+input[type="checkbox"], input[type="radio"] {
+    box-shadow: 0 0 0 2px #444, 0 0 2px 2px #000 !important;
+    opacity: 0.7;
+    transition: box-shadow 0.2s, opacity 0.2s !important}
+input[type="checkbox"]:not([disabled]):hover, input[type="radio"]:not([disabled]):hover {
+    opacity: 0.9}
+input[type="checkbox"]:not([disabled]):active, input[type="radio"]:not([disabled]):active {
+    box-shadow: 0 0 0 2px #999, 0 0 2px 2px #000 !important}
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+    box-shadow: 0 0 0 2px #077, 0 0 2px 2px #000 !important}
+input[type="checkbox"][disabled], input[type="radio"][disabled] {
+    opacity: 0.35}
+*/
+input[type="checkbox"] {border-radius: 1px !important}
+input[type="radio"], input[type="radio"]:focus {border-radius: 100% !important}
+input[type="checkbox"], input[type="radio"] {min-width: 12px; min-height: 12px}
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+    border-color: #077 !important;
+    box-shadow: 0 0 5px #077 !important}
+
+select {
+    padding-right: 15px !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAECAYAAABCxiV9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAeSURBVBhXY5g5c+Z/BiwALo6uAEMDTACXSWgSDAwA4jATh950E30AAAAASUVORK5CYII=) no-repeat right 4px center #060606 !important;
+    transition: border-color 0.3s, background-position 0.3s !important}
+
+
+button:active, input[type="submit"]:active, input[type="button"]:active, a.button:active, a[class*="button"]:not(:empty):active, a.submit:active, a.BigButton:active, a.TabLink:active, .Active .TabLink {
+    background: #292929 !important;
+    color: #FFF !important}
+
+textarea {
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    background: rgba(0,0,0,.3) !important;
+    border-radius: 3px !important;
+    border: 1px solid #000 !important;
+    box-shadow: inset 0 0 8px #000 !important;
+    transition: border-color, background, 0.3s !important}
+textarea, textarea * {
+    color: #C8C8C8 !important;
+    text-shadow: 0 0 1px gray !important}
+textarea:hover, textarea:focus:hover {
+    border-color: #333 !important}
+textarea:focus {
+    background: rgba(0,0,0,.5) !important;
+    border-color: #222 !important}
+textarea:focus, textarea:focus > * {
+    text-shadow: none !important;
+    box-shadow: none !important}
+
+option, optgroup {
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    background: none !important;
+    color: #666 !important}
+optgroup {
+    background: #222 !important;
+    color: #DDD !important}
+option:not([disabled]):hover, option:focus, option:checked {
+    background: linear-gradient(#333, #292929) !important;
+    color: #DDD !important}
+
+
+/*----- IMAGE CHANGES -----*/
+body, *:not(:empty):not(html):not(span):not(a):not(b):not(option):not(select):not(img):not([style="display: block;"]):not([onclick*="open"]):not([onclick*="s_objectID"]):not([class*="stars"]):not([id*="stars"]):not([id="rating"]):not([class="rating"]):not([class*="SPRITE"]):not([id*="SPRITE"]):not([class*="item"]):not([id*="item"]):not([class*="thumb"]):not([class*="icon"]):not([class*="photo"]):not(.view):not(.text):not([id*="lbImage"]):not([class*="cc-in"]):not([class*="gr-body"]):not([id*="watch"]):not(#globalsearch),
+.r3_hm, .gmbutton2 b, .gtab-i, .ph, .bstab-iLft, .csb, #pagination div, [style*="sprite2.png"], #mw-head-base, #mw-page-base {
+    background-image: none !important}
+
+img {opacity: .7 !important; transition: opacity .2s}
+img:hover, a:hover img, #mpiv-popup {opacity: 1 !important}</style></html>
