@@ -10,7 +10,7 @@
     vertical-align: top;
     }
 .logo {
-    width: 10%;
+    width: 20%;
     padding: 1%;
     text-align: left;
 }
@@ -140,3 +140,9 @@ html {
     scroll-behavior: smooth;
   }
   
+.bg-red{
+    background-color: #D83232;
+}
+.text-red{
+    color: #D83232;
+}
